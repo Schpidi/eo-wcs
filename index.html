@@ -20,13 +20,13 @@
 <p>Open Geospatial Consortium<br></p>
 </div>
 <div id="ogcheading" class="paragraph">
-<p>Publication Date: 2014-02-26<br>
-Approval Date: 2013-12-31<br>
-Submission Date: 2013-08-22<br>
+<p>Publication Date: TBD<br>
+Approval Date: TBD<br>
+Submission Date: TBD<br>
 Reference number of this Document: OGC 10-140r1<br>
 External identifier of this OGC® document: <a href="http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0" class="bare">http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0</a><br>
 URL for this OGC® document: <a href="http://docs.opengeospatial.org/is/12-128r11/12-128r11.html" class="bare">http://docs.opengeospatial.org/is/12-128r11/12-128r11.html</a><br>
-Version: 1.0<br>
+Version: 1.1draft<br>
 Category: OGC® Interface Standard<br>
 Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu</p>
 </div>
@@ -52,7 +52,7 @@ documentation.</p>
 <div class="paragraph">
 <p>Document type:          OGC Implementation Standard<br>
 Document subtype:       Interface<br>
-Document stage:         Approved<br>
+Document stage:         Draft update of Approved version<br>
 Document language:      English<br></p>
 </div>
 <div class="sect1">
@@ -233,11 +233,19 @@ required by applicable law to make this license enforceable</p>
 <li><a href="#__em_describeeocoverageset_em_exceptions">7.5.4. <em>DescribeEOCoverageSet</em> exceptions</a></li>
 </ul>
 </li>
+<li><a href="#__em_geteocoverageset_em_operation">7.6. <em>GetEOCoverageSet</em> operation</a>
+<ul class="sectlevel3">
+<li><a href="#_overview_6">7.6.1. Overview</a></li>
+<li><a href="#__em_geteocoverageset_em_request">7.6.2. <em>GetEOCoverageSet</em> request</a></li>
+<li><a href="#__em_geteocoverageset_em_response">7.6.3. <em>GetEOCoverageSet</em> response</a></li>
+<li><a href="#__em_geteocoverageset_em_exceptions">7.6.4. <em>GetEOCoverageSet</em> exceptions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#wcs_extensions">8. WCS extensions</a>
 <ul class="sectlevel2">
-<li><a href="#_overview_6">8.1. Overview</a></li>
+<li><a href="#_overview_7">8.1. Overview</a></li>
 <li><a href="#_band_subsetting">8.2. Band subsetting</a></li>
 <li><a href="#_scaling_interpolation">8.3. Scaling &amp; interpolation</a></li>
 <li><a href="#_crss">8.4. CRSs</a></li>
@@ -3054,13 +3062,47 @@ violating Dataset Series and/or EO Coverage identifiers</p></td>
 </table>
 </div>
 </div>
+<div class="sect2">
+<h3 id="__em_geteocoverageset_em_operation">7.6. <em>GetEOCoverageSet</em> operation</h3>
+<div class="sect3">
+<h4 id="_overview_6">7.6.1. Overview</h4>
+<div class="paragraph">
+<p>Just like the <em>DescribeEOCoverageSet</em> request a <em>GetEOCoverageSet</em> request
+submits one or more Dataset Series, Stitched Mosaic, or Dataset identifiers
+together with a spatio-temporal subsetting criterion ("bounding box"). The
+spatial constraint is expressed in WGS84 <a href="#4">[4]</a>, the temporal constraint in ISO
+8601 <a href="#2">[2]</a>.</p>
+</div>
+<div class="paragraph">
+<p>The response to a successful request on a Dataset Series consists of a (possibly
+empty) set of coverages of Datasets and Stitched Mosaics. The response to a
+successful request on a Stitched Mosaic consists of a (possibly empty) set of
+coverages of Datasets. In any case, the result items are those ones which are
+(i) referred to directly or via Dataset Series by the object submitted and (ii)
+matched by the bounding box. The type of matching - <code>contains</code> or <code>overlaps</code> -
+is specified in the request.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__em_geteocoverageset_em_request">7.6.2. <em>GetEOCoverageSet</em> request</h4>
+
+</div>
+<div class="sect3">
+<h4 id="__em_geteocoverageset_em_response">7.6.3. <em>GetEOCoverageSet</em> response</h4>
+
+</div>
+<div class="sect3">
+<h4 id="__em_geteocoverageset_em_exceptions">7.6.4. <em>GetEOCoverageSet</em> exceptions</h4>
+
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="wcs_extensions">8. WCS extensions</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_overview_6">8.1. Overview</h3>
+<h3 id="_overview_7">8.1. Overview</h3>
 <div class="paragraph">
 <p>Requirements class <em>eowcs</em> normatively depends on the WCS Extension
 specifications listed in this Clause. In other words, any implementation
@@ -5768,6 +5810,14 @@ Footer</p></td>
 copy and published it on GitHub (<a href="https://github.com/EOX-A/eo-wcs" class="bare">https://github.com/EOX-A/eo-wcs</a>,
 <a href="https://eox-a.github.io/eo-wcs" class="bare">https://eox-a.github.io/eo-wcs</a>)</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stephan Meissl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proposal from ESA
+project EVO-ODAS</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -5775,7 +5825,7 @@ copy and published it on GitHub (<a href="https://github.com/EOX-A/eo-wcs" class
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-05-11 11:13:49 CEST
+Last updated 2016-05-11 11:55:48 CEST
 </div>
 </div>
 </body>
