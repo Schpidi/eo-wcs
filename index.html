@@ -24,8 +24,8 @@
 Approval Date: TBD<br>
 Submission Date: TBD<br>
 Reference number of this Document: OGC 10-140r1<br>
-External identifier of this OGC® document: <a href="http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0" class="bare">http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0</a><br>
-URL for this OGC® document: <a href="http://docs.opengeospatial.org/is/12-128r11/12-128r11.html" class="bare">http://docs.opengeospatial.org/is/12-128r11/12-128r11.html</a><br>
+External reference for this OGC® document: <a href="http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0" class="bare">http://www.opengis.net/doc/IS/WCS-application-profile-earth-observation/1.0</a><br>
+URL for this OGC® document: <a href="https://eox-a.github.io/eo-wcs/" class="bare">https://eox-a.github.io/eo-wcs/</a><br>
 Version: 1.1draft<br>
 Category: OGC® Interface Standard<br>
 Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu</p>
@@ -36,7 +36,7 @@ Editor: Peter Baumann, Stephan Meissl, Jinsongdi Yu</p>
 <h2 id="_ogc_web_coverage_service_2_0_interface_standard_earth_observation_application_profile">OGC® Web Coverage Service 2.0 Interface Standard - Earth Observation Application Profile</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Copyright © 2014 Open Geospatial Consortium.<br>
+<p>Copyright © 2014, 2016 Open Geospatial Consortium.<br>
 To obtain additional rights of use, visit <a href="http://www.opengeospatial.org/legal/" class="bare">http://www.opengeospatial.org/legal/</a><br></p>
 </div>
 <div class="paragraph">
@@ -403,7 +403,8 @@ suggested changes in an edited copy of this document.</p>
 <h2 id="_keywords">Keywords</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ogcdoc, wcs, profile, eo</p>
+<p>ogcdoc, wcs, profile, eo, earth observation, dataset, dataset series, stitched
+mosaic</p>
 </div>
 </div>
 </div>
@@ -474,12 +475,12 @@ Open GeoSpatial Consortium, Inc.:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Jacobs University Bremen</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Stephan Meissl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EOX IT Services GmbH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stephan Meissl &lt;<a href="mailto:stephan.meissl@eox.at">stephan.meissl@eox.at</a>&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://eox.at">EOX IT Services GmbH</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Christian Schiller</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EOX IT Services GmbH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://eox.at">EOX IT Services GmbH</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -505,12 +506,12 @@ technical contents of this (part of this) document.</p>
 <li>
 <p>Allow additional coverage representations (i.e., "multipart" and "special
 format" coverage encodings) once these are adopted for the GML Application
-Schema for Cover- ages [OGC 09-146].</p>
+Schema for Coverages [OGC 09-146].</p>
 </li>
 <li>
 <p>Extend the current 2-D EO Coverage footprint to 3-D footprints by extending
-them with elevation; this will involve extending footprints from bounding multi-
-curves (polygons) to multi-surfaces.</p>
+them with elevation; this will involve extending footprints from bounding
+multi-curves (polygons) to multi-surfaces.</p>
 </li>
 <li>
 <p>Specify usage and content of <code>EOWCS::Lineage</code> in more detail.</p>
@@ -668,8 +669,9 @@ artefact claiming to implement EO-WCS.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This <em>OGC WCS Application Profile - Earth Observation</em> specification consists of
-the present document and an XML Schema. The complete specification is identified
-by OGC URI
+the present document and an
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a>. The complete
+specification is identified by OGC URI
 <a href="http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0" class="bare">http://www.opengis.net/spec/WCS_application-profile_earth-observation/1.0</a>,
 the document has OGC URI
 <a href="http://www.opengis.net/doc/ISx/WCS_application-profile_earth-observation/1.0" class="bare">http://www.opengis.net/doc/ISx/WCS_application-profile_earth-observation/1.0</a>.</p>
@@ -693,12 +695,12 @@ referred to applies.</p>
 <p>OGC 06-121r9, <em>OGC Web Services Common Standard</em>, version 2.0</p>
 </div>
 <div class="paragraph">
-<p>OGC 09-146r2, <em>GML 3.2.1 Application Schema for Coverages</em>, version 1.0<br>
+<p>TBD OGC 09-146r2, <em>Coverages Implementation Schema / GML 3.2.1 Application Schema for Coverages</em>, version 1.1<br>
 Conformance classes used: gml-coverage</p>
 </div>
 <div class="paragraph">
-<p>OGC 09-110r4, OGC® <em>Web Coverage Service 2.0 Interface Standard Core</em>,
-version 2.0<br>
+<p>TBD OGC 09-110r4, OGC® <em>Web Coverage Service 2.0 Interface Standard Core</em>,
+version 2.1<br>
 Conformance classes used: core</p>
 </div>
 <div class="paragraph">
@@ -770,8 +772,9 @@ specifications are available as adopted OGC documents.
 <h2 id="_terms_and_definitions_2">4. Terms and definitions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For the purposes of this document, the terms and definitions given in the above references
-apply. In addition, the following terms and definitions apply. An arrow "&#8594;" indicates that the following term is defined in this Clause.</p>
+<p>For the purposes of this document, the terms and definitions given in the above
+references apply. In addition, the following terms and definitions apply. An
+arrow "&#8594;" indicates that the following term is defined in this Clause.</p>
 </div>
 <div class="sect2">
 <h3 id="_coverage">4.1. Coverage</h3>
@@ -898,14 +901,14 @@ to which the prefixes refer are normative, however.</p>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">gmlcov</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.opengis.net/gmlcov/1.0" class="bare">http://www.opengis.net/gmlcov/1.0</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GML Application Schema for
-Coverages 1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.opengis.net/gmlcov/1.1" class="bare">http://www.opengis.net/gmlcov/1.1</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coverages Implementation Schema
+1.1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">wcs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.opengis.net/wcs/2.0" class="bare">http://www.opengis.net/wcs/2.0</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">WCS 2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.opengis.net/wcs/2.1" class="bare">http://www.opengis.net/wcs/2.1</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WCS 2.1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">eop</p></td>
@@ -927,9 +930,9 @@ Profile of Observations and Measurements (extension of eop)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">wcseo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.opengis.net/wcs/wcseo/1.0" class="bare">http://www.opengis.net/wcs/wcseo/1.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.opengis.net/wcs/wcseo/1.1" class="bare">http://www.opengis.net/wcs/wcseo/1.1</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WCS Application Profile - Earth
-Observation 1.0</p></td>
+Observation 1.1</p></td>
 </tr>
 </tbody>
 </table>
@@ -939,7 +942,8 @@ Observation 1.0</p></td>
 <div class="paragraph">
 <p>When multiple representations of the same information are given in a
 specification document these are consistent. Should this not be the case then
-this is considered an error, and the XML schema shall take precedence.</p>
+this is considered an error, and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> shall take precedence.</p>
 </div>
 </div>
 </div>
@@ -1042,7 +1046,8 @@ operations leading to the coverage on hand.</p>
 <div class="title">Requirement 1 /req/eowcs/eo-metadata-structure</div>
 <blockquote>
 A <code>EOWCS::EOMetadata</code> instance <strong>shall</strong> conform to <a href="#eometadata_components">Table 2</a>,
-<a href="#uml_model">Figure 2</a>, <a href="#uml_lineage_class">Figure 3</a>, and the XML schema being part of this
+<a href="#uml_model">Figure 2</a>, <a href="#uml_lineage_class">Figure 3</a>, and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
 standard.
 </blockquote>
 </div>
@@ -1171,8 +1176,9 @@ de- fined in [OGC 09-146r2].</p>
 <div class="title">Requirement 3 /req/eowcs/eo-coverage-structure</div>
 <blockquote>
 <code>EOWCS::ReferenceableEOCoverage</code> and <code>EOWCS::RectifiedEOCoverage</code> instances
-<strong>shall</strong> conform to <a href="#uml_model">Figure 2</a>, <a href="#uml_lineage_class">Figure 3</a>, and the XML schema
-being part of this standard.
+<strong>shall</strong> conform to <a href="#uml_model">Figure 2</a>, <a href="#uml_lineage_class">Figure 3</a>, and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
+standard.
 </blockquote>
 </div>
 </div>
@@ -1210,7 +1216,7 @@ elements.
 <td class="content">
 According to the rules of GML, a xlink:href URI to an accessible element
 of type <code>EOWCS::EOMetadata</code> can be provided instead of the element itself in any
-place of the XML schema where such a metadata record appears.
+place of the XML Schema where such a metadata record appears.
 </td>
 </tr>
 </table>
@@ -1342,7 +1348,8 @@ image scene.
 <div class="title">Requirement 10 /req/eowcs/dataset-structure</div>
 <blockquote>
 A <code>EOWCS::ReferenceableDataset</code> and a <code>EOWCS::RectifiedDataset</code> <strong>shall</strong> conform
-to <a href="#uml_model">Figure 2</a>, <a href="#uml_lineage_class">Figure 3</a>, and the XML schema being part of this
+to <a href="#uml_model">Figure 2</a>, <a href="#uml_lineage_class">Figure 3</a>, and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
 standard.
 </blockquote>
 </div>
@@ -1393,7 +1400,9 @@ contained Datasets carry nil values.</p>
 <blockquote>
 <code>EOWCS::ReferenceableStitchedMosaic</code> instances <strong>shall</strong> conform to <a href="#uml_model">Figure 2</a>,
 <a href="#uml_lineage_class">Figure 3</a>, <a href="#refstitchedmosaic_components">Table 3</a>,
-<a href="#datasetreference_components">Table 5</a>, and the XML schema being part of this standard.
+<a href="#datasetreference_components">Table 5</a>, and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
+standard.
 </blockquote>
 </div>
 <table id="refstitchedmosaic_components" class="tableblock frame-all grid-all spread">
@@ -1427,7 +1436,9 @@ Mosaic on hand</p></td>
 <blockquote>
 <code>EOWCS::RectifiedStitchedMosaic</code> instances <strong>shall</strong> conform to <a href="#uml_model">Figure 2</a>,
 <a href="#uml_lineage_class">Figure 3</a>, <a href="#rectstitchedmosaic_components">Table 4</a>,
-<a href="#datasetreference_components">Table 5</a>, and the XML schema being part of this standard.
+<a href="#datasetreference_components">Table 5</a>, and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
+standard.
 </blockquote>
 </div>
 <table id="rectstitchedmosaic_components" class="tableblock frame-all grid-all spread">
@@ -1665,7 +1676,9 @@ such a Dataset is also referred to by the enclosing Dataset Series.
 <div class="title">Requirement 25 /req/eowcs/datasetSeries-structure</div>
 <blockquote>
 A <code>EOWCS::DatasetSeries</code> shall conform to <a href="#uml_model">Figure 2</a>, <a href="#uml_lineage_class">Figure 3</a>,
-<a href="#datasetseries_components">Table 6</a>, and the XML schema being part of this standard.
+<a href="#datasetseries_components">Table 6</a>, and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
+standard.
 </blockquote>
 </div>
 <table id="datasetseries_components" class="tableblock frame-all grid-all spread">
@@ -1896,7 +1909,8 @@ response:
 <blockquote>
 The response to a successful <em>GetCapabilities</em> request <strong>shall</strong> consist of a data
 structure as defined in <a href="#response_getcapabilities">Figure 7</a>,
-<a href="#datasetseriessummary_components">Table 7</a>, and the XML Schema being part of this 4
+<a href="#datasetseriessummary_components">Table 7</a>, and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
 standard.<br>
 <strong>Dependency</strong>: [OGC 09-110r4] Clause 8
 (<a href="http://www.opengis.net/doc/IS/wcs-core-2.0.1/clause/8" class="bare">http://www.opengis.net/doc/IS/wcs-core-2.0.1/clause/8</a>)
@@ -2044,8 +2058,9 @@ listed <strong>shall</strong> contain in its <code>WCS::CoverageSubtype</code> e
 <blockquote>
 If the response to a successful <em>GetCapabilities</em> request contains an
 <code>ows:Constraint</code> element in its <code>ows:OperationsMetadata</code> element then its name
-attribute <strong>shall</strong> hold a value as defined in <a href="#contraint_values">Table 9</a> and the XML
-Schema being part of this standard.
+attribute <strong>shall</strong> hold a value as defined in <a href="#contraint_values">Table 9</a> and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
+standard.
 </blockquote>
 </div>
 <table id="contraint_values" class="tableblock frame-all grid-all spread">
@@ -2090,6 +2105,9 @@ means of self defence, so that a request may not clog the server.
 <div class="paragraph">
 <p>Example: The following XML excerpt shows a possible <code>Contents</code> section containing
 Dataset Series information:</p>
+</div>
+<div class="paragraph">
+<p>TODO: Add supported formats and default format for GetEOCOverageSet results.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2534,10 +2552,79 @@ in the request.</p>
 <div class="title">Requirement 47 /req/eowcs/describeEOCoverageSet-request-structure</div>
 <blockquote>
 A <em>DescribeEOCoverageSet</em> request <strong>shall</strong> consist of a structure as defined in
-<a href="#request_describeeocoverageset">Figure 8</a>, <a href="#describeeocoverageset_comp">Table 10</a> and the XML
-schema being part of this standard.
+<a href="#request_describeeocoverageset">Figure 8</a>, <a href="#describeeocoverageset_comp">Table 10</a> and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
+standard.
 </blockquote>
 </div>
+<div id="request_describeeocoverageset" class="imageblock">
+<div class="content">
+<img src="request-describeeocoverageset.png" alt="DescribeEOCoverageSet request">
+</div>
+<div class="title">Figure 8. <em>DescribeEOCoverageSet</em> request UML diagram</div>
+</div>
+<table id="describeeocoverageset_comp" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 10. Components of <code>DescribeEOCoverageSet</code> operation request</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-center valign-top">Multiplicity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>request</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code> , fixed to "DescribeEOCoverageSet"</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">one
+(mandatory)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eoId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier of Dataset Series, Stitched Mosaic, or Dataset to be
+evaluated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NCName</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">one or more (mandatory)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>containment</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intersection mode for evaluation of object bounding box against
+request parameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or one (optional)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum number of <code>CoverageDescription</code> and <code>DatasetSeriesDescription</code>
+elements to be included in the response</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code> greater than zero</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or
+one (optional)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sections</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unordered list of zero or more names of the XML elements that shall
+be returned</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or one (optional)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dimensionTrim</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trim specification, as per WCS Core [OGC 09-110r4] Subclause
+8.4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WCS::DimensionTrim</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or more (optional)</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>The <em>DescribeEOCoverageSet</em> request type contains two sections (cf. [OGC
 06-121r9] Clause 7.3.3) whose appearance in the response can be controlled by
@@ -2637,74 +2724,6 @@ Coverage inquired.
 </tr>
 </table>
 </div>
-<div id="request_describeeocoverageset" class="imageblock">
-<div class="content">
-<img src="request-describeeocoverageset.png" alt="DescribeEOCoverageSet request">
-</div>
-<div class="title">Figure 8. <em>DescribeEOCoverageSet</em> request UML diagram</div>
-</div>
-<table id="describeeocoverageset_comp" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 10. Components of <code>DescribeEOCoverageSet</code> operation request</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 37.5%;">
-<col style="width: 25%;">
-<col style="width: 12.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Definition</th>
-<th class="tableblock halign-left valign-top">Data type</th>
-<th class="tableblock halign-center valign-top">Multiplicity</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>request</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code> , fixed to "DescribeEOCoverageSet"</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">one
-(mandatory)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eoId</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier of Dataset Series, Stitched Mosaic, or Dataset to be
-evaluated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NCName</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">one or more (mandatory)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>containment</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Intersection mode for evaluation of object bounding box against
-request parameters</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">zero or one (optional)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>count</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum number of <code>CoverageDescription</code> and <code>DatasetSeriesDescription</code>
-elements to be included in the response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code> greater than zero</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">zero or
-one (optional)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sections</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unordered list of zero or more names of the XML elements that shall
-be returned</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">zero or one (optional)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dimensionTrim</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">trim specification, as per WCS Core [OGC 09-110r4] Subclause
-8.4.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WCS::DimensionTrim</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">zero or more (optional)</p></td>
-</tr>
-</tbody>
-</table>
 <div class="paragraph">
 <p>Example: The following XML instance shows a possible <em>DescribeEOCoverageSet</em>
 operation request:</p>
@@ -2748,8 +2767,9 @@ Dataset Series descriptions (cf. <a href="#resp_describeeocoverageset">Figure 9<
 <blockquote>
 The response to a successful <em>DescribeEOCoverageSet</em> request <strong>shall</strong> consist of
 a <code>EOWCS::EOCoverageSetDescription</code> structure as defined in
-<a href="#eocoveragesetdescription_comp">Table 11</a>, <a href="#resp_describeeocoverageset">Figure 9</a> and the XML
-Schema being part of this standard.<br>
+<a href="#eocoveragesetdescription_comp">Table 11</a>, <a href="#resp_describeeocoverageset">Figure 9</a> and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
+standard.<br>
 Dependency: [OGC 09-110r4] Subclause 8.3.2
 (<a href="http://www.opengis.net/doc/IS/WCS/2.0/clause/8" class="bare">http://www.opengis.net/doc/IS/WCS/2.0/clause/8</a>)
 </blockquote>
@@ -3082,10 +3102,240 @@ coverages of Datasets. In any case, the result items are those ones which are
 matched by the bounding box. The type of matching - <code>contains</code> or <code>overlaps</code> -
 is specified in the request.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Using the <em>GetEOCoverageSet</em> operation allows to retrieve entire coverages
+in their native format and native CRS without any processing like subsetting
+applied. To request custom formats, CRSs, or processing like subsetting the
+<em>GetCoverage</em> operation should be used.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="__em_geteocoverageset_em_request">7.6.2. <em>GetEOCoverageSet</em> request</h4>
-
+<div id="_requirement-67" class="quoteblock">
+<div class="title">Requirement 67 /req/eowcs/getEOCoverageSet-request-structure</div>
+<blockquote>
+A <em>GetEOCoverageSet</em> request <strong>shall</strong> consist of a structure as defined in
+<a href="#request_geteocoverageset">Figure 10</a>, <a href="#geteocoverageset_comp">Table 13</a> and the
+<a href="http://schemas.opengis.net/wcs/wcseo/1.0/">XML Schema</a> being part of this
+standard.
+</blockquote>
+</div>
+<div id="request_geteocoverageset" class="imageblock">
+<div class="content">
+<img src="request-geteocoverageset.png" alt="GetEOCoverageSet request">
+</div>
+<div class="title">Figure 10. <em>GetEOCoverageSet</em> request UML diagram</div>
+</div>
+<table id="geteocoverageset_comp" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 13. Components of <code>GetEOCoverageSet</code> operation request</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-center valign-top">Multiplicity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>request</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code> , fixed to "GetEOCoverageSet"</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">one
+(mandatory)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eoId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier of Dataset Series, Stitched Mosaic, or Dataset to be
+evaluated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NCName</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">one or more (mandatory)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>containment</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intersection mode for evaluation of object bounding box against
+request parameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or one (optional)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum number of <code>WCS::Coverage</code> elements to be included in the
+response</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code> greater than zero</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or one (optional)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dimensionTrim</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trim specification, as per WCS Core [OGC 09-110r4] Subclause
+8.4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WCS::DimensionTrim</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or more (optional)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>format</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MIME type identifier of the format in which the coverages returned
+are to be packaged e.g., <code>application/x-gzip</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>anyURI</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or one (optional)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mediaType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If present, enforces a multipart encoding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>anyURI</code>, fixed to
+"<code>multipart/related</code>"</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">zero or one (optional)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TODO NOTE: Future versions of EO-WCS are likely to use the <code>DimensionTrim</code> element
+defined in the forthcoming <em>Predefined CRSs</em> Extension instead of
+<code>WCS::DimensionTrim</code>.</p>
+</div>
+<div id="_requirement-68" class="quoteblock">
+<div class="title">Requirement 68 /req/eowcs/getEOCoverageSet-request-eoId</div>
+<blockquote>
+Each <code>eoId</code> parameter value in a <em>GetEOCoverageSet</em> request <strong>shall</strong> be
+equal to the identifier of a Dataset, a Stitched Mosaic, or a Dataset Series
+offered by the server addressed.
+</blockquote>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A <em>GetEOCoverageSet</em> request is possible on the identifiers of
+objects offered by the server even if these are not listed in a GetCapabilities
+response.
+</td>
+</tr>
+</table>
+</div>
+<div id="_requirement-69" class="quoteblock">
+<div class="title">Requirement 69 /req/eowcs/getEOCoverageSet-request-containment</div>
+<blockquote>
+If a <em>GetEOCoverageSet</em> request contains a <code>containment</code> parameter then
+this parameter <strong>shall</strong> have one of the values "contains" or "overlaps".
+</blockquote>
+</div>
+<div id="_requirement-70" class="quoteblock">
+<div class="title">Requirement 70 /req/eowcs/getEOCoverageSet-request-dimensions</div>
+<blockquote>
+If a <em>GetEOCoverageSet</em> request contains <code>dimensionTrim</code> elements with
+<code>dimension</code> parameters then each such <code>dimension</code> parameter <strong>shall</strong> have one of
+the values "lat", "long", or "phenomenonTime". Each of these values <strong>shall</strong>
+appear at most once in a given request.
+</blockquote>
+</div>
+<div id="_requirement-71" class="quoteblock">
+<div class="title">Requirement 71 /req/eowcs/getEOCoverageSet-request-crs</div>
+<blockquote>
+A <em>GetEOCoverageSet</em> request <strong>shall</strong> use WGS84 <a href="#4">[4]</a> as spatial and
+ISO 8601 <a href="#2">[2]</a> as temporal CRS for the coordinates in trim requests.
+</blockquote>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Trim coordinates are not required to lie within the boundaries of the EO
+Coverage inquired.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>TODO: requirements for: <code>format</code>, <code>mediaType</code>, &#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>The encoding format in which the coverage will be returned is specified by the
+combination of <code>format</code> and <code>mediaType</code> parameter. Admissible values (i.e,
+formats supported) are those listed in the server’s Capabilities document.
+Default is the coverage’s Native Format.</p>
+</div>
+<div id="_requirement-72" class="quoteblock">
+<div class="title">Requirement 72 /req/core/getCoverage-acceptable-format</div>
+<blockquote>
+If a <em>GetCoverage</em> request contains a <code>format</code> parameter then this parameter
+<strong>shall</strong> contain a MIME type identifier occurring in some <code>wcs:formatSupported</code>
+element of the response to a successful <em>GetCapabilities</em> request to this
+server.
+</blockquote>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The default format for the coverage response is the coverage’s Native
+Format.
+</td>
+</tr>
+</table>
+</div>
+<div id="_requirement-73" class="quoteblock">
+<div class="title">Requirement 73 /req/core/getCoverage-acceptable-mediaType</div>
+<blockquote>
+If a <em>GetCoverage</em> request contains a <code>mediaType</code> parameter then this parameter
+shall contain a MIME type identifier of fixed value "<code>multipart/related</code>".
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Example: The following XML instance shows a possible <em>GetEOCoverageSet</em>
+operation request:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;wcseo:GetEOCoverageSet</span> <span class="attribute-name">xmlns:wcseo</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/wcs/wcseo/1.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:wcs</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/wcs/2.0</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xmlns:xsi</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.w3.org/2001/XMLSchema-instance</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">xsi:schemaLocation</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/wcs/wcseo/1.0 http://schemas.opengis.net/wcs/wcseo/1.0/wcsEOAll.xsd</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">service</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">WCS</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">version</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">2.0.1</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">count</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">100</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;wcseo:eoId&gt;</span>DS1<span class="tag">&lt;/wcseo:eoId&gt;</span>
+  <span class="tag">&lt;wcseo:containment&gt;</span>overlaps<span class="tag">&lt;/wcseo:containment&gt;</span>
+  <span class="tag">&lt;wcseo:sections&gt;</span>
+    <span class="tag">&lt;wcseo:section&gt;</span>All<span class="tag">&lt;/wcseo:section&gt;</span>
+  <span class="tag">&lt;/wcseo:sections&gt;</span>
+  <span class="tag">&lt;wcs:DimensionTrim&gt;</span>
+    <span class="tag">&lt;wcs:Dimension&gt;</span>long<span class="tag">&lt;/wcs:Dimension&gt;</span>
+    <span class="tag">&lt;wcs:TrimLow&gt;</span>16<span class="tag">&lt;/wcs:TrimLow&gt;</span>
+    <span class="tag">&lt;wcs:TrimHigh&gt;</span>18<span class="tag">&lt;/wcs:TrimHigh&gt;</span>
+  <span class="tag">&lt;/wcs:DimensionTrim&gt;</span>
+  <span class="tag">&lt;wcs:DimensionTrim&gt;</span>
+    <span class="tag">&lt;wcs:Dimension&gt;</span>lat<span class="tag">&lt;/wcs:Dimension&gt;</span>
+    <span class="tag">&lt;wcs:TrimLow&gt;</span>40<span class="tag">&lt;/wcs:TrimLow&gt;</span>
+    <span class="tag">&lt;wcs:TrimHigh&gt;</span>42<span class="tag">&lt;/wcs:TrimHigh&gt;</span>
+  <span class="tag">&lt;/wcs:DimensionTrim&gt;</span>
+  <span class="tag">&lt;wcs:DimensionTrim&gt;</span>
+    <span class="tag">&lt;wcs:Dimension&gt;</span>phenomenonTime<span class="tag">&lt;/wcs:Dimension&gt;</span>
+    <span class="tag">&lt;wcs:TrimLow&gt;</span>2008-03-13T10:10:00Z<span class="tag">&lt;/wcs:TrimLow&gt;</span>
+    <span class="tag">&lt;wcs:TrimHigh&gt;</span>2008-03-13T10:11:00Z<span class="tag">&lt;/wcs:TrimHigh&gt;</span>
+  <span class="tag">&lt;/wcs:DimensionTrim&gt;</span>
+  <span class="tag">&lt;wcs:format&gt;</span>application/x-gzip<span class="tag">&lt;/wcs:format&gt;</span>
+  <span class="tag">&lt;wcs:mediaType&gt;</span>multipart/related<span class="tag">&lt;/wcs:mediaType&gt;</span>
+<span class="tag">&lt;/wcseo:GetEOCoverageSet&gt;</span></code></pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="__em_geteocoverageset_em_response">7.6.3. <em>GetEOCoverageSet</em> response</h4>
@@ -3112,8 +3362,8 @@ specifications required in this Clause.</p>
 </div>
 <div class="sect2">
 <h3 id="_band_subsetting">8.2. Band subsetting</h3>
-<div id="_requirement-67" class="quoteblock">
-<div class="title">Requirement 67 /req/eowcs/band-subsetting</div>
+<div id="_requirement-74" class="quoteblock">
+<div class="title">Requirement 74 /req/eowcs/band-subsetting</div>
 <blockquote>
 Implementations of this EO-WCS <strong>shall</strong> support the WCS 2.0 Range Subsetting
 Extension [OGC 12-040].<br>
@@ -3124,8 +3374,8 @@ Extension [OGC 12-040].<br>
 </div>
 <div class="sect2">
 <h3 id="_scaling_interpolation">8.3. Scaling &amp; interpolation</h3>
-<div id="_requirement-68" class="quoteblock">
-<div class="title">Requirement 68 /req/eowcs/scaling</div>
+<div id="_requirement-75" class="quoteblock">
+<div class="title">Requirement 75 /req/eowcs/scaling</div>
 <blockquote>
 Implementations of this EO-WCS <strong>shall</strong> support the WCS 2.0 Scaling Extension
 [OGC 12-039].<br>
@@ -3133,8 +3383,8 @@ Implementations of this EO-WCS <strong>shall</strong> support the WCS 2.0 Scalin
 <a href="http://www.opengis.net/spec/WCS_service-extension_scaling/1.0/conf/scaling" class="bare">http://www.opengis.net/spec/WCS_service-extension_scaling/1.0/conf/scaling</a>
 </blockquote>
 </div>
-<div id="_requirement-69" class="quoteblock">
-<div class="title">Requirement 69 /req/eowcs/interpolation</div>
+<div id="_requirement-76" class="quoteblock">
+<div class="title">Requirement 76 /req/eowcs/interpolation</div>
 <blockquote>
 Implementations of this EO-WCS <strong>shall</strong> support the WCS 2.0 Interpolation
 Extension [OGC 12-049].<br>
@@ -3145,8 +3395,8 @@ Extension [OGC 12-049].<br>
 </div>
 <div class="sect2">
 <h3 id="_crss">8.4. CRSs</h3>
-<div id="_requirement-70" class="quoteblock">
-<div class="title">Requirement 70 /req/eowcs/crs</div>
+<div id="_requirement-77" class="quoteblock">
+<div class="title">Requirement 77 /req/eowcs/crs</div>
 <blockquote>
 Implementations of this EO-WCS <strong>shall</strong> support the WCS 2.0 CRS Extension
 [OGC 11-053].<br>
@@ -3157,8 +3407,8 @@ Implementations of this EO-WCS <strong>shall</strong> support the WCS 2.0 CRS Ex
 </div>
 <div class="sect2">
 <h3 id="_coverage_format_encodings">8.5. Coverage format encodings</h3>
-<div id="_requirement-71" class="quoteblock">
-<div class="title">Requirement 71 /req/eowcs/encodings</div>
+<div id="_requirement-78" class="quoteblock">
+<div class="title">Requirement 78 /req/eowcs/encodings</div>
 <blockquote>
 Implementations of this EO-WCS <strong>shall</strong> support at least one of the WCS 2.0
 coverage format encodings GeoTIFF [OGC12-100r1], NetCDF [OGC 11-010], and
@@ -3183,8 +3433,8 @@ implementation. This choice is represented in this specification by two separate
 conformance classes, <em>eowcs_get-kvp</em> and <em>eowcs_soap</em> defined in the Subclauses
 below.</p>
 </div>
-<div id="_requirement-72" class="quoteblock">
-<div class="title">Requirement 72 /req/eowcs/protocol-bindings</div>
+<div id="_requirement-79" class="quoteblock">
+<div class="title">Requirement 79 /req/eowcs/protocol-bindings</div>
 <blockquote>
 Implementations of this EO-WCS <strong>shall</strong> support at least one of the requirements
 classes <em>eowcs_get-kvp</em> and <em>eowcs_soap</em>.<br>
@@ -3198,8 +3448,8 @@ classes <em>eowcs_get-kvp</em> and <em>eowcs_soap</em>.<br>
 <h3 id="_get_kvp_protocol_conformance_class">9.2. GET-KVP protocol conformance class</h3>
 <div class="sect3">
 <h4 id="_wcs_get_kvp_encoding">9.2.1. WCS GET/KVP encoding</h4>
-<div id="_requirement-73" class="quoteblock">
-<div class="title">Requirement 73 /req/eowcs_get-kvp/mandatory</div>
+<div id="_requirement-80" class="quoteblock">
+<div class="title">Requirement 80 /req/eowcs_get-kvp/mandatory</div>
 <blockquote>
 Implementations of this EO-WCS which support the <em>eowcs_get-kvp</em> requirements
 class <strong>shall</strong> support the WCS 2.0 protocol extension GET/KVP [OGC 09-147r3].<br>
@@ -3207,8 +3457,8 @@ class <strong>shall</strong> support the WCS 2.0 protocol extension GET/KVP [OGC
 <a href="http://www.opengis.net/spec/WCS_protocol-binding_get-kvp/1.0/conf/get-kvp" class="bare">http://www.opengis.net/spec/WCS_protocol-binding_get-kvp/1.0/conf/get-kvp</a>
 </blockquote>
 </div>
-<div id="_requirement-74" class="quoteblock">
-<div class="title">Requirement 74 /req/eowcs_get-kvp/conformance-class-in-profile</div>
+<div id="_requirement-81" class="quoteblock">
+<div class="title">Requirement 81 /req/eowcs_get-kvp/conformance-class-in-profile</div>
 <blockquote>
 Implementations of this EO-WCS which support the <em>eowcs_get-kvp</em> requirements
 class <strong>shall</strong> include the following URI in a <code>Profile</code> element in the
@@ -3219,16 +3469,16 @@ class <strong>shall</strong> include the following URI in a <code>Profile</code>
 </div>
 <div class="sect3">
 <h4 id="__em_describeeocoverageset_em_get_kvp_encoding">9.2.2. <em>DescribeEOCoverageSet</em> GET/KVP encoding</h4>
-<div id="_requirement-75" class="quoteblock">
-<div class="title">Requirement 75 /req/eowcs_get-kvp/describeEOCoverageSet-request</div>
+<div id="_requirement-82" class="quoteblock">
+<div class="title">Requirement 82 /req/eowcs_get-kvp/describeEOCoverageSet-request</div>
 <blockquote>
 The <code>request</code> parameter in the <code>DescribeEOCoverageSet</code> request parameter of a
 <em>DescribeEOCoverageSet</em> request <strong>shall</strong> be indicated as follows:<br>
 <code>request=DescribeEOCoverageSet</code>
 </blockquote>
 </div>
-<div id="_requirement-76" class="quoteblock">
-<div class="title">Requirement 76 /req/eowcs_get-kvp/describeEOCoverageSet-eoid</div>
+<div id="_requirement-83" class="quoteblock">
+<div class="title">Requirement 83 /req/eowcs_get-kvp/describeEOCoverageSet-eoid</div>
 <blockquote>
 The <code>eoId</code> parameter in the <code>DescribeEOCoverageSet</code> request parameter of a
 <em>DescribeEOCoverageSet</em> request <strong>shall</strong> be indicated as follows, for parameter
@@ -3236,8 +3486,8 @@ values <em>v<sub>1</sub>, &#8230;&#8203;, v<sub>n</sub></em>:<br>
 <code>eoid=v<sub>1</sub>,&#8230;&#8203;,v<sub>n</sub></code>
 </blockquote>
 </div>
-<div id="_requirement-77" class="quoteblock">
-<div class="title">Requirement 77 /req/eowcs_get-kvp/describeEOCoverageSet-containment</div>
+<div id="_requirement-84" class="quoteblock">
+<div class="title">Requirement 84 /req/eowcs_get-kvp/describeEOCoverageSet-containment</div>
 <blockquote>
 The <code>containment</code> parameter in the <code>DescribeEOCoverageSet</code> request parameter of
 a <em>DescribeEOCoverageSet</em> request <strong>shall</strong> be indicated as follows:<br>
@@ -3246,12 +3496,12 @@ or<br>
 <code>containment=contains</code>
 </blockquote>
 </div>
-<div id="_requirement-78" class="quoteblock">
-<div class="title">Requirement 78 /req/eowcs_get-kvp/describeEOCoverageSet-subset</div>
+<div id="_requirement-85" class="quoteblock">
+<div class="title">Requirement 85 /req/eowcs_get-kvp/describeEOCoverageSet-subset</div>
 <blockquote>
 The <code>trim</code> parameters in the <code>DescribeEOCoverageSet</code> request parameter of a
 <em>DescribeEOCoverageSet</em> request <strong>shall</strong> be indicated through a possibly empty
-set of subset specifications, each one with key "&#8203;<code>subset</code>" and value
+set of subset specifications, each one with key "<code>subset</code>" and value
 specification given by a <code>SubsetSpec</code> adhering to this EBNF syntax <a href="#3">[3]</a>
 and the resp. XML definitions <a href="#6">[6]</a>:<br>
 <code>SubsetSpec: dimension <span class="underline">(</span> interval <span class="underline">)</span></code><br>
@@ -3336,8 +3586,8 @@ service=WCS
 <h3 id="_soap_protocol_conformance_class">9.3. SOAP protocol conformance class</h3>
 <div class="sect3">
 <h4 id="_wcs_soap_encoding">9.3.1. WCS SOAP encoding</h4>
-<div id="_requirement-79" class="quoteblock">
-<div class="title">Requirement 79 /req/eowcs_soap/mandatory</div>
+<div id="_requirement-86" class="quoteblock">
+<div class="title">Requirement 86 /req/eowcs_soap/mandatory</div>
 <blockquote>
 Implementations of this EO-WCS which support the <em>eowcs_soap</em> requirements class
 <strong>shall</strong> support the WCS 2.0 protocol extension SOAP [OGC 09-149r1].<br>
@@ -3345,8 +3595,8 @@ Implementations of this EO-WCS which support the <em>eowcs_soap</em> requirement
 <a href="http://www.opengis.net/spec/WCS_protocol-binding_soap/1.0/conf/soap" class="bare">http://www.opengis.net/spec/WCS_protocol-binding_soap/1.0/conf/soap</a>
 </blockquote>
 </div>
-<div id="_requirement-80" class="quoteblock">
-<div class="title">Requirement 80 /req/eowcs_soap/conformance-class-in-profile</div>
+<div id="_requirement-87" class="quoteblock">
+<div class="title">Requirement 87 /req/eowcs_soap/conformance-class-in-profile</div>
 <blockquote>
 Implementations of this EO-WCS which support the <em>eowcs_soap</em> requirements class
 <strong>shall</strong> include the following URI in a <code>Profile</code> element in the
@@ -3357,15 +3607,15 @@ Implementations of this EO-WCS which support the <em>eowcs_soap</em> requirement
 </div>
 <div class="sect3">
 <h4 id="__em_describeeocoverageset_em_soap_encoding">9.3.2. <em>DescribeEOCoverageSet</em> SOAP encoding</h4>
-<div id="_requirement-81" class="quoteblock">
-<div class="title">Requirement 81 /req/eowcs_soap/describeEOCoverageSet-request-structure</div>
+<div id="_requirement-88" class="quoteblock">
+<div class="title">Requirement 88 /req/eowcs_soap/describeEOCoverageSet-request-structure</div>
 <blockquote>
 A <em>DescribeEOCoverageSet</em> request <strong>shall</strong> contain exactly one <code>Body</code> element
 containing exactly one <code>DescribeEOCoverageSet</code> element.
 </blockquote>
 </div>
-<div id="_requirement-82" class="quoteblock">
-<div class="title">Requirement 82 /req/eowcs_soap/describeEOCoverageSet-response-structure</div>
+<div id="_requirement-89" class="quoteblock">
+<div class="title">Requirement 89 /req/eowcs_soap/describeEOCoverageSet-response-structure</div>
 <blockquote>
 In the response to a successful <em>DescribeEOCoverageSet</em> request, the SOAP
 <code>Envelope</code> <strong>shall</strong> contain exactly one <code>Body</code> element which contains a
@@ -3379,8 +3629,8 @@ In the response to a successful <em>DescribeEOCoverageSet</em> request, the SOAP
 </div>
 <div class="sect3">
 <h4 id="__em_describeeocoverageset_em_wsdl">9.3.3. <em>DescribeEOCoverageSet</em> WSDL</h4>
-<div id="_requirement-83" class="quoteblock">
-<div class="title">Requirement 83 /req/eowcs_soap/wsdl</div>
+<div id="_requirement-90" class="quoteblock">
+<div class="title">Requirement 90 /req/eowcs_soap/wsdl</div>
 <blockquote>
 Publication of a WCS SOAP service endpoint <strong>shall</strong> use the binding as defined
 in file <code>wsdl/wcs-soap-binding.wsdl</code> of the EO-WCS package.
@@ -5307,7 +5557,7 @@ Check that the sum of the numbers of <code>CoverageDescription</code> and
 <p><strong>Test id: /conf/eowcs/band-subsetting</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-67">Requirement 67 /req/eowcs/band-subsetting</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-67">Requirement 67 /req/eowcs/getEOCoverageSet-request-structure</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5323,7 +5573,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/scaling+interpolation</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-68">Requirement 68 /req/eowcs/scaling</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-68">Requirement 68 /req/eowcs/getEOCoverageSet-request-eoId</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5339,7 +5589,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/interpolation</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-69">Requirement 69 /req/eowcs/interpolation</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-69">Requirement 69 /req/eowcs/getEOCoverageSet-request-containment</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5355,7 +5605,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/crs-predefined</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-70">Requirement 70 /req/eowcs/crs</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-70">Requirement 70 /req/eowcs/getEOCoverageSet-request-dimensions</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5371,7 +5621,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/encodings</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-71">Requirement 71 /req/eowcs/encodings</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-71">Requirement 71 /req/eowcs/getEOCoverageSet-request-crs</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5387,7 +5637,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/protocol-bindings</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-72">Requirement 72 /req/eowcs/protocol-bindings</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-72">Requirement 72 /req/core/getCoverage-acceptable-format</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5406,7 +5656,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_get-kvp/mandatory</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-73">Requirement 73 /req/eowcs_get-kvp/mandatory</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-73">Requirement 73 /req/core/getCoverage-acceptable-mediaType</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5422,7 +5672,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_get-kvp/conformance-class-in-profile</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-74">Requirement 74 /req/eowcs_get-kvp/conformance-class-in-profile</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-74">Requirement 74 /req/eowcs/band-subsetting</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5438,7 +5688,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-request</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-75">Requirement 75 /req/eowcs_get-kvp/describeEOCoverageSet-request</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-75">Requirement 75 /req/eowcs/scaling</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5454,7 +5704,7 @@ response is not an exception.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-eoid</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-76">Requirement 76 /req/eowcs_get-kvp/describeEOCoverageSet-eoid</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-76">Requirement 76 /req/eowcs/interpolation</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5470,7 +5720,7 @@ response is not an exception.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-containment</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-77">Requirement 77 /req/eowcs_get-kvp/describeEOCoverageSet-containment</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-77">Requirement 77 /req/eowcs/crs</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5486,7 +5736,7 @@ response is not an exception.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_get-kvp/describeEOCoverageSet-subset</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-78">Requirement 78 /req/eowcs_get-kvp/describeEOCoverageSet-subset</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-78">Requirement 78 /req/eowcs/encodings</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5505,7 +5755,7 @@ response is not an exception.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_soap/mandatory</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-79">Requirement 79 /req/eowcs_soap/mandatory</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-79">Requirement 79 /req/eowcs/protocol-bindings</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5521,7 +5771,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_soap/conformance-class-in-profile</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-80">Requirement 80 /req/eowcs_soap/conformance-class-in-profile</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-80">Requirement 80 /req/eowcs_get-kvp/mandatory</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5537,7 +5787,7 @@ request; check that the extension required is listed.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_soap/describeEOCoverageSet-request-structure</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-81">Requirement 81 /req/eowcs_soap/describeEOCoverageSet-request-structure</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-81">Requirement 81 /req/eowcs_get-kvp/conformance-class-in-profile</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5576,7 +5826,7 @@ element;</p>
 <p><strong>Test id: /conf/eowcs/eowcs_soap/describeEOCoverageSet-request-structure</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-82">Requirement 82 /req/eowcs_soap/describeEOCoverageSet-response-structure</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-82">Requirement 82 /req/eowcs_get-kvp/describeEOCoverageSet-request</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5592,7 +5842,7 @@ response whether the condition is fulfilled.</p>
 <p><strong>Test id: /conf/eowcs/eowcs_soap/wsdl</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Test Purpose: <a href="#_requirement-83">Requirement 83 /req/eowcs_soap/wsdl</a></strong></p>
+<p><strong>Test Purpose: <a href="#_requirement-83">Requirement 83 /req/eowcs_get-kvp/describeEOCoverageSet-eoid</a></strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Test method:</strong></p>
@@ -5825,7 +6075,7 @@ project EVO-ODAS</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-05-11 11:55:48 CEST
+Last updated 2016-05-11 18:34:05 CEST
 </div>
 </div>
 </body>
