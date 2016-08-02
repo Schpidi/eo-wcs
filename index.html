@@ -1485,12 +1485,12 @@ as well as data conversion information on <code>swe:Quantity</code> level.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;gmlcov:rangeType&gt;</span>
-  <span class="tag">&lt;swe:DataRecord</span> <span class="attribute-name">definition</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">TODO</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;swe:DataRecord</span> <span class="attribute-name">definition</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/def/property/OGC-EO/0/opt/SpectralMode/PANCHROMATIC</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
     <span class="tag">&lt;swe:extension&gt;</span>
       <span class="tag">&lt;wcseo:rangeTypeExtension&gt;</span>
         <span class="tag">&lt;wcseo:RGBgenerationHint&gt;</span>
           <span class="tag">&lt;wcseo:bandSequence&gt;</span>gray gray gray<span class="tag">&lt;/wcseo:bandSequence&gt;</span>
-          <span class="tag">&lt;wcseo:intervalFrom&gt;</span>100 10000000<span class="tag">&lt;/wcseo:intervalFrom&gt;</span>
+          <span class="tag">&lt;wcseo:intervalFrom&gt;</span>1 4095<span class="tag">&lt;/wcseo:intervalFrom&gt;</span>
           <span class="tag">&lt;wcseo:intervalTo&gt;</span>1 255<span class="tag">&lt;/wcseo:intervalTo&gt;</span>
           <span class="tag">&lt;wcseo:type&gt;</span>logarithmic<span class="tag">&lt;/wcseo:type&gt;</span>
         <span class="tag">&lt;/wcseo:RGBgenerationHint&gt;</span>
@@ -1498,14 +1498,14 @@ as well as data conversion information on <code>swe:Quantity</code> level.</p>
     <span class="tag">&lt;/swe:extension&gt;</span>
     <span class="tag">&lt;swe:label&gt;</span>Gray Channel/Band<span class="tag">&lt;/swe:label&gt;</span>
     <span class="tag">&lt;swe:field</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">gray</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-      <span class="tag">&lt;swe:Quantity</span> <span class="attribute-name">definition</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;swe:Quantity</span> <span class="attribute-name">definition</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://sweet.jpl.nasa.gov/2.3/propEnergyFlux.owl#SpectralRadiance</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
         <span class="tag">&lt;swe:extension&gt;</span>
           <span class="tag">&lt;wcseo:rangeTypeExtension&gt;</span>
-            <span class="tag">&lt;wcseo:dataSemantics&gt;</span>http://www.opengis.net/def/property/OGC/0/Radiance<span class="tag">&lt;/wcseo:dataSemantics&gt;</span>
+            <span class="tag">&lt;wcseo:dataSemantics&gt;</span>http://sweet.jpl.nasa.gov/2.3/stateSpectralBand.owl#Visible<span class="tag">&lt;/wcseo:dataSemantics&gt;</span>
             <span class="tag">&lt;wcseo:dataType&gt;</span>http://www.opengis.net/def/dataType/OGC/1.1/nonNegativeInteger<span class="tag">&lt;/wcseo:dataType&gt;</span>
             <span class="tag">&lt;wcseo:dataType2dataSemantics&gt;</span>
-              <span class="tag">&lt;wcseo:intervalFrom&gt;</span>100 10000000<span class="tag">&lt;/wcseo:intervalFrom&gt;</span>
-              <span class="tag">&lt;wcseo:intervalTo&gt;</span>400.0000 700.0000<span class="tag">&lt;/wcseo:intervalTo&gt;</span>
+              <span class="tag">&lt;wcseo:intervalFrom&gt;</span>1 4095<span class="tag">&lt;/wcseo:intervalFrom&gt;</span>
+              <span class="tag">&lt;wcseo:intervalTo&gt;</span>390.0000 780.0000<span class="tag">&lt;/wcseo:intervalTo&gt;</span>
               <span class="tag">&lt;wcseo:type&gt;</span>linear<span class="tag">&lt;/wcseo:type&gt;</span>
             <span class="tag">&lt;/wcseo:dataType2dataSemantics&gt;</span>
           <span class="tag">&lt;/wcseo:rangeTypeExtension&gt;</span>
@@ -1521,8 +1521,8 @@ as well as data conversion information on <code>swe:Quantity</code> level.</p>
         <span class="tag">&lt;swe:uom</span> <span class="attribute-name">code</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">W.m-2.sr-1.nm-1</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
         <span class="tag">&lt;swe:constraint&gt;</span>
           <span class="tag">&lt;swe:AllowedValues&gt;</span>
-            <span class="tag">&lt;swe:interval&gt;</span>0 10000000<span class="tag">&lt;/swe:interval&gt;</span>
-            <span class="tag">&lt;swe:significantFigures&gt;</span>8<span class="tag">&lt;/swe:significantFigures&gt;</span>
+            <span class="tag">&lt;swe:interval&gt;</span>0 4095<span class="tag">&lt;/swe:interval&gt;</span>
+            <span class="tag">&lt;swe:significantFigures&gt;</span>4<span class="tag">&lt;/swe:significantFigures&gt;</span>
           <span class="tag">&lt;/swe:AllowedValues&gt;</span>
         <span class="tag">&lt;/swe:constraint&gt;</span>
       <span class="tag">&lt;/swe:Quantity&gt;</span>
@@ -4967,9 +4967,6 @@ interchange - Representation of dates and time</p>
 <p><a id="8"></a>[8] OGC 09-025r2, OpenGIS Web Feature Service 2.0 Interface Standard -
 With Corrigendum, version 2.0.2</p>
 </li>
-<li>
-<p><a id="9"></a>[9] OGC 16-118 EO Data Access Best Practice, version 0.0.1</p>
-</li>
 </ul>
 </div>
 </div>
@@ -8315,7 +8312,7 @@ project EVO-ODAS</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-08-01 16:25:38 CEST
+Last updated 2016-08-02 18:36:12 CEST
 </div>
 </div>
 </body>
