@@ -1492,7 +1492,7 @@ as well as data conversion information on <code>swe:Quantity</code> level.</p>
           <span class="tag">&lt;wcseo:bandSequence&gt;</span>gray gray gray<span class="tag">&lt;/wcseo:bandSequence&gt;</span>
           <span class="tag">&lt;wcseo:intervalFrom&gt;</span>1 4095<span class="tag">&lt;/wcseo:intervalFrom&gt;</span>
           <span class="tag">&lt;wcseo:intervalTo&gt;</span>1 255<span class="tag">&lt;/wcseo:intervalTo&gt;</span>
-          <span class="tag">&lt;wcseo:type&gt;</span>logarithmic<span class="tag">&lt;/wcseo:type&gt;</span>
+          <span class="tag">&lt;wcseo:type&gt;</span>http://sweet.jpl.nasa.gov/2.3/reprMathFunction.owl#Logarithmic<span class="tag">&lt;/wcseo:type&gt;</span>
         <span class="tag">&lt;/wcseo:RGBgenerationHint&gt;</span>
       <span class="tag">&lt;/wcseo:rangeTypeExtension&gt;</span>
     <span class="tag">&lt;/swe:extension&gt;</span>
@@ -1502,11 +1502,11 @@ as well as data conversion information on <code>swe:Quantity</code> level.</p>
         <span class="tag">&lt;swe:extension&gt;</span>
           <span class="tag">&lt;wcseo:rangeTypeExtension&gt;</span>
             <span class="tag">&lt;wcseo:dataSemantics&gt;</span>http://sweet.jpl.nasa.gov/2.3/stateSpectralBand.owl#Visible<span class="tag">&lt;/wcseo:dataSemantics&gt;</span>
-            <span class="tag">&lt;wcseo:dataType&gt;</span>http://www.opengis.net/def/dataType/OGC/1.1/nonNegativeInteger<span class="tag">&lt;/wcseo:dataType&gt;</span>
+            <span class="tag">&lt;wcseo:dataType&gt;</span>http://www.opengis.net/def/dataType/OGC/0/unsignedShort<span class="tag">&lt;/wcseo:dataType&gt;</span>
             <span class="tag">&lt;wcseo:dataType2dataSemantics&gt;</span>
               <span class="tag">&lt;wcseo:intervalFrom&gt;</span>1 4095<span class="tag">&lt;/wcseo:intervalFrom&gt;</span>
               <span class="tag">&lt;wcseo:intervalTo&gt;</span>390.0000 780.0000<span class="tag">&lt;/wcseo:intervalTo&gt;</span>
-              <span class="tag">&lt;wcseo:type&gt;</span>linear<span class="tag">&lt;/wcseo:type&gt;</span>
+              <span class="tag">&lt;wcseo:type&gt;</span>http://sweet.jpl.nasa.gov/2.3/reprMathFunction.owl#Linear<span class="tag">&lt;/wcseo:type&gt;</span>
             <span class="tag">&lt;/wcseo:dataType2dataSemantics&gt;</span>
           <span class="tag">&lt;/wcseo:rangeTypeExtension&gt;</span>
         <span class="tag">&lt;/swe:extension&gt;</span>
@@ -1823,7 +1823,7 @@ of the Datasets the Stitched Mosaic refers to.</p>
 For any given Stitched Mosaic, its temporal validity given by its
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition</code> and
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition</code> elements
-in <code>eowcs:EOMetadata</code> <strong>shall</strong> be defined as the minimal time interval containing
+in <code>wcseo:EOMetadata</code> <strong>shall</strong> be defined as the minimal time interval containing
 the temporal validities of all Datasets the Stitched Mosaic refers to.
 </blockquote>
 </div>
@@ -2329,7 +2329,7 @@ or "All".
 <div class="title">Requirement 40 /req/eowcs/getCapabilities-response-datasetSeriesSummary-section</div>
 <blockquote>
 If a <em>GetCapabilities</em> request contains a <code>sections</code> parameter then a successful
-response <strong>shall</strong> contain <code>eowcs:DatasetSeriesSummary</code> elements if and only if
+response <strong>shall</strong> contain <code>wcseo:DatasetSeriesSummary</code> elements if and only if
 the section parameter list contains one of the values "DatasetSeriesSummary",
 "Contents", or "All".
 </blockquote>
@@ -3231,7 +3231,7 @@ only if the section parameter list contains one of the values
 <div class="title">Requirement 64 /req/eowcs/describeEOCoverageSet-response-section-datasetSeriesDescriptions</div>
 <blockquote>
 If a <em>DescribeEOCoverageSet</em> request contains a <code>sections</code> parameter then a
-successful response <strong>shall</strong> contain a <code>eowcs:DatasetSeriesDescriptions</code> element
+successful response <strong>shall</strong> contain a <code>wcseo:DatasetSeriesDescriptions</code> element
 if and only if the section parameter list contains one of the values
 "DatasetSeriesDescriptions" or "All".
 </blockquote>
@@ -3319,7 +3319,7 @@ The response to a successful <em>DescribeEOCoverageSet</em> request containing a
 Coverages whose time interval defined by its
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition</code> and
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition</code> elements
-in <code>eowcs:EOMetadata</code><br>
+in <code>wcseo:EOMetadata</code><br>
 - overlaps with the request time extent, and the request parameter <code>containment</code>
   is of value <code>overlaps</code> or is omitted,<br>
 - is completely contained within the request time extent, and the request
@@ -4092,7 +4092,7 @@ The response to a successful <em>GetEOCoverageSet</em> request <strong>shall</st
 Coverages whose time interval defined by its
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition</code> and
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition</code> elements
-in <code>eowcs:EOMetadata</code><br>
+in <code>wcseo:EOMetadata</code><br>
 - overlaps with the request time extent, and the request parameter <code>containment</code>
   is of value <code>overlaps</code> or is omitted,<br>
 - is completely contained within the request time extent, and the request
@@ -5716,7 +5716,7 @@ and <em>d<sub>2</sub></em> domain set are identical.</p>
 <p>retrieve the time interval <em>t</em> of the Stitched Mosaic given by its
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition</code> and
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition</code>
-elements in <code>eowcs:EOMetadata</code> via <em>DescribeCoverage</em>,
+elements in <code>wcseo:EOMetadata</code> via <em>DescribeCoverage</em>,
 <em>DescribeEOCoverageSet</em>, and <em>GetCoverage</em> operations.</p>
 </li>
 <li>
@@ -5728,7 +5728,7 @@ For each obtained dataset <em>d</em>:</p>
 <p>retrieve the time interval <em>t<sub>i</sub></em> of <code>dataset</code> <em>d</em> given by its
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition</code> and
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition</code>
-elements in <code>eowcs:EOMetadata</code> via <em>DescribeCoverage</em>,
+elements in <code>wcseo:EOMetadata</code> via <em>DescribeCoverage</em>,
 <em>DescribeEOCoverageSet</em>, and <em>GetCoverage</em> operations.</p>
 </li>
 <li>
@@ -6165,7 +6165,7 @@ or "All" to the service under test. Check that the response contains
 <p>Send valid <em>GetCapabilities</em> requests contains a <code>sections</code> parameter and the
 section parameter list contains one of the values "DatasetSeriesSummary" or
 "All" to the service under test. Check that the response contains a
-<code>eowcs:DatasetSeriesSummary</code>.Test passes if all individual tests pass.</p>
+<code>wcseo:DatasetSeriesSummary</code>.Test passes if all individual tests pass.</p>
 </div>
 </div>
 <div class="sect3">
@@ -6839,14 +6839,14 @@ Check that:</p>
 the response contains only descriptions of EO Coverages whose time interval
 defined by its
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition</code> and <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition</code>
-elements in <code>eowcs:EOMetadata</code> overlaps with the request time extent;</p>
+elements in <code>wcseo:EOMetadata</code> overlaps with the request time extent;</p>
 </li>
 <li>
 <p>if request parameter <code>containment</code> is of value <code>contains</code>, the response
 contains only descriptions of EO Coverages whose time interval defined by its
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:beginPosition</code> and
 <code>eop:EarthObservation/om:phenomenonTime/gml:TimePeriod/gml:endPosition</code>
-elements in <code>eowcs:EOMetadata</code> is completely contained within the request time
+elements in <code>wcseo:EOMetadata</code> is completely contained within the request time
 extent;</p>
 </li>
 </ul>
@@ -8312,7 +8312,7 @@ project EVO-ODAS</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-08-02 18:36:12 CEST
+Last updated 2016-08-02 18:38:07 CEST
 </div>
 </div>
 </body>
